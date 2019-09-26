@@ -4,6 +4,7 @@
 export const START_ROULETTE = 'START_ROULETTE';
 export const STOP_ROULETTE = 'STOP_ROULETTE';
 export const TOGGLE_VIEW = 'TOGGLE_VIEW';
+export const TICK = 'TICK';
 export const RESET_GAME = 'RESET_GAME';
 
 /*
@@ -19,19 +20,25 @@ export const Views = {
 /*
  * action creators
  */
+export const startRoulette = (intervalId) => ({
+    type: START_ROULETTE,
+    intervalId
+});
 
-export const startRoulette = () => {
-    return { type: START_ROULETTE }
-};
+export const stopRoulette = () => ({
+   type: STOP_ROULETTE
+});
 
-export const stopRoulette = () => {
-    return { type: STOP_ROULETTE }
-};
+export const resetGame = (maxNum=75) => ({
+    type: RESET_GAME,
+    maxNum
+});
 
-export const resetGame = () => {
-    return { type: RESET_GAME }
-};
+export const tickNumber = () => ({
+    type: TICK
+});
 
-export const toggleView = (view)  => {
-    return { type: TOGGLE_VIEW, view }
-};
+export const toggleView = (view)  => ({
+    type: TOGGLE_VIEW,
+    view
+});
