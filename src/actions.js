@@ -34,8 +34,9 @@ export const resetGame = (maxNum=75) => ({
     maxNum
 });
 
-export const tickNumber = () => ({
-    type: TICK
+export const tickNumber = (nextInt=1) => ({
+    type: TICK,
+    nextInt
 });
 
 export const toggleView = (view)  => ({

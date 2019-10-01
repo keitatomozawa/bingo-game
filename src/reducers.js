@@ -8,7 +8,7 @@ export const rootReducer = (state=bingo.initialState(), action) => {
         case STOP_ROULETTE:
             return bingo.stop(state);
         case TICK:
-            return bingo.tick(state);
+            return bingo.tick(state, action.nextInt);
         case RESET_GAME:
             return bingo.reset(state, action.maxNum);
         default:

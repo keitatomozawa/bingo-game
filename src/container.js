@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { App } from './app.js';
+import { App } from './App.js';
 import * as action from './actions.js';
 
 const mapStateToProps = (state) => state;
@@ -16,7 +16,6 @@ const mapDispatchToProps = (dispatch, props) => ({
 
 function mergeProps (stateProps, dispatchProps, ownProps) {
     return Object.assign({}, stateProps, dispatchProps, ownProps, {
-        // タイマーが止まっていたら、カウントアップを開始する
         startTimer: () => {
             if (stateProps.remains.length===0) dispatchProps.resetGame()
         }

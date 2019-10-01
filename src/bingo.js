@@ -9,15 +9,17 @@ export const stop = (state) => {
 
     return {
         ...state,
+        started: false,
         remains: state.remains.filter(n => n !== state.displayed),
-        history: state.history.map((b, i) => i===state.displayed-1?true:b),
+        table: state.table.map((b, i) => i===state.displayed-1?true:b),
+        history: [state.displayed, ...state.history],
         intervalId: -1
     }
 };
 
-export const tick = (state) => ({
+export const tick = (state, nextInt) => ({
     ...state,
-    displayed: state.remains[getRandomInt(0, state.ramains.length)]
+    displayed: state.remains[getRandomInt(0, state.remains.length)]
 });
 
 export const reset = (state, maxNum) => initialState(maxNum);
@@ -33,5 +35,6 @@ export const initialState = (maxNum=75) => ({
     intervalId: -1,
     displayed: 1,
     remains: [...Array(maxNum).keys()].map(i => ++i),
-    history: Array(maxNum).fill(false)
+    table: Array(maxNum).fill(false),
+    history: []
 });
