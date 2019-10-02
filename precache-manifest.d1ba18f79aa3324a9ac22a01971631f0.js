@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1aeb28fd52976465103e37a32307ca49",
+    "revision": "da2b58381f7b56e8b0f95c4530b48b99",
     "url": "/bingo-game/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bingo-game/static/js/2.e833e581.chunk.js"
   },
   {
-    "revision": "0c28c2f1daa2c5a24496",
-    "url": "/bingo-game/static/js/main.50a62d16.chunk.js"
+    "revision": "bb839dfab79d25ee781f",
+    "url": "/bingo-game/static/js/main.acad9e99.chunk.js"
   },
   {
     "revision": "b2839ed4952eddd9b966",
