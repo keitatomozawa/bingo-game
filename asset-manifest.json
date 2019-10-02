@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/bingo-game/static/js/main.50a62d16.chunk.js",
+    "main.js.map": "/bingo-game/static/js/main.50a62d16.chunk.js.map",
+    "runtime-main.js": "/bingo-game/static/js/runtime-main.79deb03b.js",
+    "runtime-main.js.map": "/bingo-game/static/js/runtime-main.79deb03b.js.map",
+    "static/js/2.e833e581.chunk.js": "/bingo-game/static/js/2.e833e581.chunk.js",
+    "static/js/2.e833e581.chunk.js.map": "/bingo-game/static/js/2.e833e581.chunk.js.map",
+    "index.html": "/bingo-game/index.html",
+    "precache-manifest.e46fc3b2d3f779b4f338c42940fc1d2d.js": "/bingo-game/precache-manifest.e46fc3b2d3f779b4f338c42940fc1d2d.js",
+    "service-worker.js": "/bingo-game/service-worker.js"
+  }
+}
