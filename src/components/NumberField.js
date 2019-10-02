@@ -1,14 +1,27 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import {
+    Box,
+    Paper
+} from "@material-ui/core";
+import {makeStyles} from "@material-ui/core";
 
-const NumberField = ({ displayed }) => (
-    <div>
-        {displayed}
-    </div>
-);
+const useStyles = makeStyles(theme => ({
+    paper: {
+        padding: theme.spacing(2),
+        textAlign: 'center',
+        color: theme.palette.text.primary,
+    },
+}));
 
-NumberField.propTypes = {
-    displayed: PropTypes.number.isRequired
-};
+const NumberField = ({ displayed }) => {
+    const classes = useStyles();
+    return (
+        <Paper className={classes.paper}>
+            <Box fontSize={500}>
+                {displayed}
+            </Box>
+        </Paper>
+    );
+}
 
 export default NumberField

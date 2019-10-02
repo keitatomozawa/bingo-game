@@ -17,17 +17,22 @@ export const stop = (state) => {
     }
 };
 
-export const tick = (state, nextInt) => ({
+export const tick = (state) => ({
     ...state,
     displayed: state.remains[getRandomInt(0, state.remains.length)]
 });
 
-export const reset = (state, maxNum) => initialState(maxNum);
+
 
 const getRandomInt = (min, max) => {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
+};
+
+export const reset = (state, maxNum) => {
+    clearInterval(state.intervalId);
+    return initialState(maxNum);
 };
 
 export const initialState = (maxNum=75) => ({
